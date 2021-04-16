@@ -1,0 +1,14 @@
+name: tutorial
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      batch_size: { type: int, default: 64 }
+      epochs: { type: int, default: 14 }
+      gamma: { type: float, default: 0.7 }
+      lr: { type: float, default: 1.0 }
+      seed: { type: int, default: 1 }
+
+    command: "python train.py --batch-size {batch_size} --epochs {epochs} --gamma {gamma} --lr {lr} --save-model --seed {seed}"

@@ -1,5 +1,12 @@
-outputs/*
+*.vscode/*
+data/*
 mlruns/*
+outputs/*
+mlflow_project/data/*
+mlflow_project/mlruns/*
+mlflow_project/outputs/*
+# data/*
+*.pt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
