@@ -144,11 +144,13 @@ And last one change is adding log of artifacts. That can be models, images and o
 
 ## MLflow run project
 
-You can easily run existing projects with the mlflow run command, which runs a project from either a local directory or a GitHub URI:
+You can easily run existing projects with the mlflow run command, which runs a project from either a local directory or a GitHub URI. 
+Tips: for running from git repo, you need to keep `MLproject` file, `conda.yaml` in root dir of repo on `master` branch
+
 
     mlflow run mlflow_project -P epochs=5
 
-    mlflow run https://github.com/warenick/mlflow-my-template/tree/main/mlflow_project.git -P epochs=10
+    mlflow run https://github.com/warenick/mlflow_project.git -P epochs=10
 
 By default mlflow run installs all dependencies using [conda](https://conda.io/). To run a project without using conda, you can provide the --no-conda option to mlflow run. In this case, you must ensure that the necessary dependencies are already installed in your Python environment.
 
